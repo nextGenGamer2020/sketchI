@@ -1,7 +1,7 @@
 function setup(){
     canvas = createCanvas(400,400)
     canvas.position(525,200)
-    canvas.background("black")
+    canvas.background("white")
     canvas.mouseReleased(classifyCanvas);
     synth = window.speechSynthesis;
 }
