@@ -6,7 +6,7 @@ function setup(){
     synth = window.speechSynthesis;
 }
 function clearCanvas(){
-    background("black")
+    background("white")
 }
 function preload(){
     classifier = ml5.imageClassifier("DoodleNet")
@@ -26,13 +26,13 @@ function classifyCanvas(){
 
 }
 
-function gotResult(error, result){
+function gotResult(error, results){
     if(error){
         console.error(error);
     }
-    console.log(result);
-    document.getElementById('label').innerHTML = "Label:" + result[0].label;
-    document.getElementById('confidence').innerHTML = "Confidence: " + Math.round(result[0].confidence * 100) + "%";
-    utterThis - new SpeechSynthesisUtterance(result[0].label);
+    console.log(results);
+    document.getElementById('label').innerHTML = "Label:" + results[0].label;
+    document.getElementById('confidence').innerHTML = "Confidence: " + Math.round(results[0].confidence * 100) + "%";
+    utterThis - new SpeechSynthesisUtterance(results[0].label);
     synth.speak(utterThis);
 }
