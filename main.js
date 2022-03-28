@@ -33,6 +33,6 @@ function gotResult(error, results){
     console.log(results);
     document.getElementById('label').innerHTML = "Label:" + results[0].label;
     document.getElementById('confidence').innerHTML = "Confidence: " + Math.round(results[0].confidence * 100) + "%";
-    utterThis - new SpeechSynthesisUtterance(results[0].label);
+    utterThis = new SpeechSynthesisUtterance(results[0].label);
     synth.speak(utterThis);
 }

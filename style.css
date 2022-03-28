@@ -28,3 +28,15 @@ canvas{
     from {box-shadow: 1px 1px 38px black;}
     to  {box-shadow: 1px 1px 38px grey;}
 }
+#timer{
+    float: left;
+    font-weight: bold;
+    font-size: 30px;
+    margin-left: 50px;
+}
+#score{
+    float: right;
+    font-weight: bold;
+    font-size: 30px;
+    margin-right: 50px;
+}
